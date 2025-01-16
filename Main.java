@@ -26,7 +26,7 @@ public class Main { // NOTE program with stack
                     
                     break;
                 case 3:
-                    
+                    read();
                     break;
                 case 4:
                     
@@ -42,10 +42,19 @@ public class Main { // NOTE program with stack
     static void create_new() {
         for (int i = 0; i < jml_note; i++) {
             System.out.print("Note Name : ");
-            head_note[i] = sc.nextLine();
             sc.nextLine();
+            head_note[i] = sc.nextLine();
             System.out.println("Contents");
             content[i] = sc.nextLine();
+        }
+    }
+
+    // method to show note 
+    static void read() {
+        for (int i = 0; i < jml_note; i++) {
+            System.out.println ("\n" + head_note[i]);
+            System.out.println("---------------------------------------");
+            System.out.println(content[i]);
         }
     }
 }
