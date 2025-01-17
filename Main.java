@@ -30,7 +30,7 @@ public class Main { // NOTE program with stack
                     read();
                     break;
                 case 4:
-                    
+                    delate();
                     break;
                 case 5:
                     return;   
@@ -60,5 +60,19 @@ public class Main { // NOTE program with stack
             System.out.println("---------------------------------------");
             System.out.println(content[i]);
         }
+    }
+    
+    static void delate() {
+        System.out.println("SELECT THE NOTE YOU WANT TO DELATE : ");
+        for (int i = 0; i < jml_note; i++) {
+            System.out.println((i+1) + " : " + head_note[i]);
+        }
+        System.out.print("SELECT : ");
+        int del = sc.nextInt();
+        if (del >= 0 && del < jml_note) {
+        head_note[del] = null;
+        content[del] = null;
+        }
+
     }
 }
