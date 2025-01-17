@@ -50,7 +50,6 @@ public class Main { // NOTE program with stack
             System.out.println("Contents");
             content[i] = sc.nextLine();
         }
-        jml_note++;
     }
 
     // method to show note 
