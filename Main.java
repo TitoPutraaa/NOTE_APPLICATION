@@ -56,7 +56,7 @@ public class Main { // NOTE program with stack
     static void read() { // method to show the note
         for (int i = 0; i < jml_note; i++) {
             if (head_note[i] == null) {
-                return;
+                continue;
             }
             System.out.println ("\n  " + head_note[i]);
             System.out.println(content[i]);
@@ -67,13 +67,16 @@ public class Main { // NOTE program with stack
     static void delate() {
         System.out.println("SELECT THE NOTE YOU WANT TO DELATE : ");
         for (int i = 0; i < jml_note; i++) {
+            if (head_note[i] == null) {
+                continue;
+            }
             System.out.println((i+1) + " : " + head_note[i]);
         }
         System.out.print("SELECT : ");
         int del = sc.nextInt();
         if (del >= 0 && del < jml_note) {
-        head_note[del] = null;
-        content[del] = null;
+        head_note[del-1] = null;
+        content[del-1] = null;
         }
 
     }
