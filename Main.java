@@ -2,9 +2,10 @@ import java.util.Scanner;
 
 public class Main { // NOTE program with stack 
     static Scanner sc = new Scanner(System.in);
-    static int jml_note = 1;
+    static int jml_note =  10;
     static String[] head_note = new String[jml_note];
     static String[] content = new String[jml_note];
+    static int idx = 0;
     
 
     public static void main(String[] args) {
@@ -43,21 +44,23 @@ public class Main { // NOTE program with stack
     }
 
     static void create_new() { // method to make new note 
-        for (int i = 0; i < jml_note; i++) {
-            System.out.print("Note Name : ");
-            sc.nextLine();
-            head_note[i] = sc.nextLine();
-            System.out.println("Contents");
-            content[i] = sc.nextLine();
-        }
+        System.out.print("Note Name : ");
+        sc.nextLine();
+        head_note[idx] = sc.nextLine();
+        System.out.println("Contents");
+        content[idx] = sc.nextLine();
+        idx++;
     }
 
     // method to show note 
     static void read() { // method to show the note
         for (int i = 0; i < jml_note; i++) {
-            System.out.println ("\n" + head_note[i]);
-            System.out.println("---------------------------------------");
+            if (head_note[i] == null) {
+                return;
+            }
+            System.out.println ("\n  " + head_note[i]);
             System.out.println(content[i]);
+            System.out.println("______________________________________");
         }
     }
     
