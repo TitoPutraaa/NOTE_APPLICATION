@@ -35,7 +35,6 @@ public class Main { // NOTE program with stack
                     break;
                 case 5:
                     return;   
-                    
                 default:
                 System.out.println("EROR, please pick number between 1 - 5 ");
                     break;
@@ -78,6 +77,23 @@ public class Main { // NOTE program with stack
         head_note[del-1] = null;
         content[del-1] = null;
         }
+
+    }
+
+    static void update() {
+        System.out.println("SELECT THE NOTE YOU WANT TO UPDATE : ");
+        for (int i = 0; i < jml_note; i++) {
+            if (head_note[i] == null) {
+                continue;
+            }
+            System.out.println((i+1) + " : " + head_note[i]);
+        }
+        System.out.print("SELECT : ");
+        int select_upd = sc.nextInt();
+        System.out.println(head_note[select_upd-1]);
+        System.out.print(content[select_upd-1]);
+        String update = sc.nextLine();
+        content[select_upd-1] += update;
 
     }
 }
