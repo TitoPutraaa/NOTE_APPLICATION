@@ -25,7 +25,7 @@ public class Main { // NOTE program with stack
                     create_new();
                     break;
                 case 2:
-                    
+                    update();
                     break;
                 case 3:
                     read();
@@ -92,8 +92,10 @@ public class Main { // NOTE program with stack
         int select_upd = sc.nextInt();
         System.out.println(head_note[select_upd-1]);
         System.out.print(content[select_upd-1]);
+        sc.nextLine();
         String update = sc.nextLine();
         content[select_upd-1] += update;
-
+        System.out.println(head_note[select_upd-1]);
+        System.out.print(content[select_upd-1]);
     }
 }
