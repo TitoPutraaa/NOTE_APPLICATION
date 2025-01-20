@@ -57,9 +57,9 @@ public class Main { // NOTE program with stack
             if (head_note[i] == null) {
                 continue;
             }
-            System.out.println ("\n  " + head_note[i]);
+            System.out.println ("\n * " + head_note[i]);
             System.out.println(content[i]);
-            System.out.println("______________________________________");
+            System.out.println("===========================");
         }
     }
     
